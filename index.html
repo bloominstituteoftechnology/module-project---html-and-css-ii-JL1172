@@ -74,28 +74,49 @@ body {
     /* 👉 Task 4- Target the divs that are directly nested underneath the id headerTop.
     Make them display as inline block, instead of block.
     This will make them render on the same line. */
-  .first-div {
+  #headerTop div {
     display: inline-block;
   }
 
     /* 👉 Task 5- Target the spans that are nested inside the id headerTop.
     Make them have some margin on the right.
     This will prevent the spans from crashing against one another. */
+    #headerTop span {
+      margin-right: 1rem;
+    }
 
     /* 👉 Task 6- Target the first span nested inside the element with id headerTop.
     Make it have a font weight of bold, and transform the text to uppercase. */
+    #headerTop span:nth-child(1) {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
 
     /* 👉 Task 7- Target the id headerBottom.
     Give it a bottom border of 1 pixel, solid gray, and a little bit of padding using px or rem units. */
-
+    #headerBottom {
+      border-bottom: 1px solid gray;
+      padding: 1.2rem; 
+    }
     /* 👉 Task 8- Target the divs that are nested directly inside the element with id headerBottom.
     Make them display as inline block, instead of block.
     This will cause them to render on the same line.
     You can consolidate this rule with the one on step. 4 */
+    #headerBottom div {
+      display: inline-block;
 
+    }
     /* 👉 Task 9- Target the "Compose" button, although note it's a div instead an actual button.
     Give it color, bold text, background, padding, border radius, margin right, and a cursor of pointer. */
-
+    #headerBottom div:nth-child(1) {
+      font-weight: bold;
+      background-color: rgb(71, 46, 212);
+      color: white; 
+      padding: 1rem;
+      border-radius: .5rem;
+      margin-right: 1.1rem;
+      cursor: pointer;
+    }
     /* 👉 Task 10- Research how to remove all the default styling of button elements.
     Target the button elements inside the element with id headerBottom.
     Remove all their styling, give them a bit of margin to the right, and a cursor of pointer. */
@@ -136,9 +157,9 @@ body {
   <div>
     <header>
       <div id="headerTop">
-        <div id="firstDiv" class = "first-div">
-          <span class = 'first-div'>Super Mail</span>
-          <span class = 'first-div'>Jess</span>
+        <div>
+          <span>Super Mail</span>
+          <span>Jess</span>
         </div>
         <div>
           <input type="text" placeholder="Search Mail" />
